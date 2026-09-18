@@ -1,0 +1,58 @@
+# ====================== 通用系统忽略 ======================
+# Windows
+Thumbs.db
+Desktop.ini
+# macOS
+.DS_Store
+.AppleDouble
+# Linux
+*~
+
+# ===================== 日志、临时文件 =====================
+*.log
+*.tmp
+*.temp
+*.bak
+
+# ====================== VSCode 专用缓存 ======================
+.vscode/.env
+.vscode/settings.jsonc
+# 注意：如果你要保存tasks.json/launch.json到仓库，不要删除下面这行注释
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/c_cpp_properties.json
+.vscode/**/.git
+*.code-workspace
+# 临时缓存
+.vs/
+.vscode/extensions.json
+*.log
+
+# ====================== ASM / C / C++ 汇编、C、C++ ======================
+# 编译产物
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.a
+*.lib
+*.elf
+*.hex
+*.bin
+*.dylib
+# 编译中间文件
+*.i
+*.s
+# 调试文件
+*.pdb
+*.map
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+# Dev-C++ / MinGW 临时文件
+*.bak
+*.layout
+*.depend
