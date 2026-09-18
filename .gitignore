@@ -8,6 +8,7 @@ Desktop.ini
 # macOS
 .DS_Store
 .AppleDouble
+.LSOverride
 # Linux
 *~
 
@@ -16,20 +17,32 @@ Desktop.ini
 *.tmp
 *.temp
 *.bak
+*.swp
+*.swo
 
 # ====================== VSCode 专用缓存 ======================
-.vscode/.env
-.vscode/settings.jsonc
+.vscode/
 # 注意：如果你要保存tasks.json/launch.json到仓库，不要删除下面这行注释
 # !.vscode/tasks.json
 # !.vscode/launch.json
 # !.vscode/c_cpp_properties.json
+.vscode/.env
+.vscode/extensions.json
+.vscode/settings.jsonc
 .vscode/**/.git
 *.code-workspace
 # 临时缓存
 .vs/
-.vscode/extensions.json
 *.log
+
+# 构建输出目录
+build/
+bin/
+obj/
+dist/
+
+# 本地用户配置
+*.csproj.user
 
 # ====================== Visual Studio ====================================
 .vs/
@@ -61,12 +74,16 @@ packages/
 
 
 # ====================== CLion / JetBrains IDE 缓存 ================
-.idea/
 cmake-build-*/
 cmake-build-release/
 cmake-build-debug/
-# 如果你想保留CLion运行配置，取消下面一行注释
-# !.idea/runConfigurations/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+# 保留 .idea 里的运行配置（可选，需要就注释上面一行，放开下面三行）
+.idea/
+#!.idea/runConfigurations/
+#!.idea/modules.xml
+#!.idea/misc.xml
 *.iml
 *.iws
 *.ipr
@@ -113,11 +130,7 @@ makefile.win
 # 调试文件
 *.pdb
 *.map
-# CMake
-CMakeCache.txt
-CMakeFiles/
-cmake-build-*/
-# Dev-C++ / MinGW 临时文件
-*.bak
-*.layout
-*.depend
+# 临时生成文件
+*.stackdump
+*.gcno
+*.gcda
